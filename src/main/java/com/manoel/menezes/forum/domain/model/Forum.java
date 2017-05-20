@@ -6,18 +6,12 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 @DynamoDBTable(tableName = "Forum")
 public class Forum {
-
     private String name;
-
     private String category;
-
     private int threads;
 
-    private int messages;
-
-    private int views;
-
-    @DynamoDBHashKey(attributeName="Name")
+    // Partition key
+    @DynamoDBHashKey(attributeName = "Name")
     public String getName() {
         return name;
     }
@@ -42,23 +36,5 @@ public class Forum {
 
     public void setThreads(int threads) {
         this.threads = threads;
-    }
-
-    @DynamoDBAttribute(attributeName = "Messages")
-    public int getMessages() {
-        return messages;
-    }
-
-    public void setMessages(int messages) {
-        this.messages = messages;
-    }
-
-    @DynamoDBAttribute(attributeName = "Views")
-    public int getViews() {
-        return views;
-    }
-
-    public void setViews(int views) {
-        this.views = views;
     }
 }

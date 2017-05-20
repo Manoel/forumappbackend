@@ -23,8 +23,7 @@ public final class ForumFinderImpl implements ForumFinder {
 
         return forumPaginatedScanList.stream()
                 .map(f -> new ForumQueryModel(f.getName(),
-                            f.getCategory(), f.getThreads(),
-                            f.getMessages(), f.getViews()))
+                            f.getCategory()!= null ? f.getCategory() : "", f.getThreads()))
                 .collect(Collectors.toList());
 
     }

@@ -8,16 +8,10 @@ public final class ForumQueryModel {
 
     private final int threads;
 
-    private final int messages;
-
-    private final int views;
-
-    public ForumQueryModel(String name, String category, int threads, int messages, int views) {
+    public ForumQueryModel(String name, String category, int threads) {
         this.name = name;
         this.category = category;
         this.threads = threads;
-        this.messages = messages;
-        this.views = views;
     }
 
     public String getName() {
@@ -32,11 +26,5 @@ public final class ForumQueryModel {
         return threads;
     }
 
-    public int getMessages() {
-        return messages;
-    }
 
-    public int getViews() {
-        return views;
-    }
 }

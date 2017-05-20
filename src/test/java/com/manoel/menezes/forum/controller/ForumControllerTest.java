@@ -37,13 +37,13 @@ public class ForumControllerTest {
     public void testFindAll() throws Exception {
 
         given(finder.findAll())
-                .willReturn(Arrays.asList(new ForumQueryModel("n", "c", 0, 0, 0)));
+                .willReturn(Arrays.asList(new ForumQueryModel("n", "c", 0)));
 
         mvc.perform(MockMvcRequestBuilders.get("/forums")
                 .accept(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(status().isOk())
                 .andExpect(content()
-                        .string("[{\"name\":\"n\",\"category\":\"c\",\"threads\":0,\"messages\":0,\"views\":0}]"));
+                        .string("[{\"name\":\"n\",\"category\":\"c\",\"threads\":0}]"));
     }
 
 
