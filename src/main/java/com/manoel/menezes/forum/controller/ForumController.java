@@ -13,8 +13,12 @@ import java.util.List;
 @RestController("/forums")
 public class ForumController {
 
+    private final ForumApplicationService service;
+
     @Autowired
-    private ForumApplicationService service;
+    public ForumController(final ForumApplicationService service) {
+        this.service = service;
+    }
 
     @RequestMapping(method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
