@@ -4,4 +4,4 @@ The forum application is a project created for studies purpose. This specific pr
  back end using the following technologies:
 
 * Spring boot framework
-* DynamoDB as NoSQL Data store
+* DynamoDB as NoSQL Data store (using DynamoDBLocal)
