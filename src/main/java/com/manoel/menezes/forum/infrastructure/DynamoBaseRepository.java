@@ -9,6 +9,8 @@ import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 
 class DynamoBaseRepository {
 
+    private DynamoBaseRepository() {}
+
     private static AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
             .withEndpointConfiguration(
                     // we can use any region here
